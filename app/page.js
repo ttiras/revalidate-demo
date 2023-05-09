@@ -1,28 +1,11 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import UpdateData from "./components/UpdateData";
+import GetData from './components/GetData';
 
 export default async function Home() {
 
-  const res = await fetch(process.env.NEXT_PUBLIC_PRODUCTS_ENDPOINT, {
-    next: {revalidate: 10},
-    method: 'POST',
-    headers: {
-      "Content-Type": "application/json"
-    },
-  
-    body: JSON.stringify({
-      query: `query getRevalidateDemoData {
-        unsubers {
-          id
-          number
-        }
-      }`
-    })
-  })
 
-  const result = await res.json();
-  const data = result.data.unsubers
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -59,21 +42,8 @@ export default async function Home() {
           priority
         />
       </div>
-
-      <div>
-        <h1>Revalidate Demo</h1>
-        <p>Expecting a revalidation in 10 seconds</p>
-        {
-                <div>
-                <i>The nnumber expected to change after update:</i>
-                {" "}
-                <b style={{fontSize:"22px"}}>{data[0].number}</b>
-                </div>
-        }
-        <br></br>
-        <UpdateData />
-    </div>
-
+      <GetData />
+      <UpdateData />
       <div className={styles.grid}>
         <a
           href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"

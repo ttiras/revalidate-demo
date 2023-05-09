@@ -36,7 +36,7 @@ export default function UpdateData() {
       }
 
   return (
-    <div>
+    <div style={{textAlign:"center"}}>
       <p>Insert a number other than the value above and wait 10 seconds to see the change.</p>
         <input type="number" onChange={(e)=>{setNumber(e.target.value)}} />
         <button onClick={()=>update()}>Upodate</button>
