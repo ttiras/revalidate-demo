@@ -40,7 +40,7 @@ export default function UpdateData() {
       <p>Insert a number other than the value above and wait 10 seconds to see the change.</p>
         <input type="number" onChange={(e)=>{setNumber(e.target.value)}} />
         <button onClick={()=>update()}>Upodate</button>
-        {mutationSuccessful&&<span>mutaion OK</span>}
+        {mutationSuccessful&&<span>mutaion OK. Refresh the page after 10 seconds.</span>}
     </div>
   )
 }
