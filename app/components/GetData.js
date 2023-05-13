@@ -14,7 +14,7 @@ return (
             <i>The initial number:</i><b> 90</b>
             <br></br>
             <br></br>
-            The number is updated at the databease after this build, and if below number is same as the initial number above, revalidation doesn't work.
+            The number is updated at the databease after this build, and if below number is same as the initial number above, revalidation does not work.
             <br></br>
             <br></br>
             {" "}
