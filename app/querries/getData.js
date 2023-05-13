@@ -7,17 +7,21 @@ export default async function getData(){
         },
       
         body: JSON.stringify({
-          query: `query getRevalidateDemoData {
-            unsubers {
+          query: `query GetProducts {
+            products(where: {isActive: {_eq: false}}) {
               id
-              number
+              name
+              dates {
+                id
+                seats
+              }
             }
           }`
         })
       })
     
       const result = await res.json();
-      const data = result.data.unsubers
+      const data = result.data
 
       return data
 }

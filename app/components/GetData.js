@@ -3,15 +3,22 @@ import getData from '../querries/getData'
 
 export default async function GetData() {
 const data = await getData();
-  return (
+const products = data?.products  
+return (
     <div style={{textAlign: "center"}}>
     <h1>Revalidate Demo</h1>
     <p>Expecting a revalidation in 10 seconds</p>
     {
             <div>
-            <i>The nnumber expected to change after update:</i>
+              <br></br>
+            <i>The initial number:</i><b> 90</b>
+            <br></br>
+            <br></br>
+            The number is updated at the databease after this build, and if below number is same as the initial number above, revalidation doesn't work.
+            <br></br>
+            <br></br>
             {" "}
-            <b style={{fontSize:"22px"}}>{data[0].number}</b>
+            {products&&<b style={{fontSize:"22px"}}>{products[0].dates[0].seats}</b>}
             </div>
     }
 </div>
