@@ -8,7 +8,7 @@ export default async function getData(){
       
         body: JSON.stringify({
           query: `query GetProducts {
-            products(where: {isActive: {_eq: false}}) {
+            products(where: {id: {_eq: 6}}) {
               id
               name
               dates {
