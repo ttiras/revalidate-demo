@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styles from './page.module.css'
-import UpdateData from "./components/UpdateData";
-import GetData from './components/GetData';
+import UpdateData from "./courses/components/UpdateData";
+import GetData from './courses/components/GetData';
 
 export default async function Home() {
 

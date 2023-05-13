@@ -1,5 +1,5 @@
 import React from 'react'
-import getData from '../querries/getData'
+import getData from '../../querries/getData'
 
 export default async function GetData() {
 const data = await getData();

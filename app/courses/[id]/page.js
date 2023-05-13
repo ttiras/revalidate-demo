@@ -1,6 +1,6 @@
 import React from 'react'
 import getData from '../../querries/getData'
-import GetData from '@/app/components/GetData';
+import GetData from '@/app/courses/components/GetData';
 import styles from '../../page.module.css'
 
 export const generateStaticParams = async () => {
