@@ -1,5 +1,6 @@
 import React from 'react'
 import getData from '../../querries/getData'
+import ShowData from './ShowData';
 
 export default async function GetData() {
 const data = await getData();
@@ -13,15 +14,15 @@ return (
     {
             <div>
               <br></br>
-            <i>The initial number:</i><b> 75</b>
+            <i>The initial number:</i><b> 89</b>
             <br></br>
             <br></br>
             The number is updated at the databease after this build, and if below number is same as the initial number above, revalidation does not work.
             <br></br>
             <br></br>
             {" "}
-            {products&&<b style={{fontSize:"22px"}}>{products[0].dates[0].seats}</b>}
-            </div>
+            <ShowData products={products} />
+              </div>
     }
 </div>
   )
