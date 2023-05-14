@@ -14,7 +14,7 @@ return (
     {
             <div>
               <br></br>
-            <i>The initial number:</i><b> 89</b>
+            <i>The initial number:</i><b> 79</b>
             <br></br>
             <br></br>
             The number is updated at the databease after this build, and if below number is same as the initial number above, revalidation does not work.

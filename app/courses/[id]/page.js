@@ -2,6 +2,7 @@ import React from 'react'
 import getData from '../../querries/getData'
 import GetData from '@/app/courses/components/GetData';
 import styles from '../../page.module.css'
+import getProducts from '@/app/querries/getProducts';
 
 export const generateStaticParams = async () => {
   const data = await getData();
@@ -12,8 +13,8 @@ export const generateStaticParams = async () => {
 };
 
 export default async function page() {
-const data = await getData();
-
+const products = await getProducts();
+console.log(products)
 
   return (
     <main className={styles.main}>
